@@ -28,5 +28,5 @@ export orig_version="$(cat "package/lean/default-settings/files/zzz-default-sett
 sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" package/lean/default-settings/files/zzz-default-settings
 
 # luci-app-cpufreq
-echo 'src-git cpufreq https://github.com/immortalwrt/luci/tree/openwrt-18.06-k5.4/applications/luci-app-cpufreq' >>feeds.conf.default
+git clone --depth=1 -b openwrt-18.06-k5.4 https://github.com/immortalwrt/luci/tree/openwrt-18.06-k5.4/applications/luci-app-cpufreq
 rm -rf ../package/lean/luci-app-cpufreq
