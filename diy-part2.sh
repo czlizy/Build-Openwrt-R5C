@@ -19,6 +19,7 @@ pushd package/community
 
 # Add luci-app-dockerman
 rm -rf ../lean/luci-app-docker
+rm -rf ../lean/luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
@@ -49,3 +50,11 @@ git clone --depth=1 https://github.com/destan19/OpenAppFilter
 # Add luci-app-unblockneteasemusic
 rm -rf ../lean/luci-app-unblockneteasemusic
 git clone --depth=1 https://github.com/immortalwrt/luci-app-unblockneteasemusic
+
+# Add cpufreq
+rm -rf package/lean/luci-app-cpufreq
+svn co https://github.com/ZZMHA227/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
+ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
+sed -i 's,1608,1800,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
+sed -i 's,2016,2208,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
+sed -i 's,1512,1608,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
