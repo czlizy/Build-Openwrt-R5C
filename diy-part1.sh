@@ -28,6 +28,8 @@ export orig_version="$(cat "package/lean/default-settings/files/zzz-default-sett
 sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" package/lean/default-settings/files/zzz-default-settings
 
 # luci-app-cpufreq
+sed -i "s/@arm/@(arm||aarch64)/g" package/lean/luci-app-cpufreq/Makefile
+sed -i "s/"services"/"system"/g" package/lean/luci-app-cpufreq/luasrc/controller/cpufreq.lua
 # Add cpufreq
 rm -rf package/lean/luci-app-cpufreq
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
