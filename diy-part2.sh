@@ -17,17 +17,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 mkdir package/community
 pushd package/community
 
-# Add luci-app-dockerman
-rm -rf ../lean/luci-app-docker
-rm -rf ../lean/luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker
-
 # Add openclash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
-
-# Add luci-app-diskman
-git clone --depth=1 https://github.com/lisaac/luci-app-diskman
 
 # Add luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
