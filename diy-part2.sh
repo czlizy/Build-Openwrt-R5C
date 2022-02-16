@@ -11,11 +11,22 @@
 #
 
 # 修改 argon 为默认主题,可根据你喜欢的修改成其他的（不选择那些会自动改变为默认主题的主题才有效果）
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' luci/collections/luci/Makefile
 
-# Clone community packages to package/community
-mkdir package/community
-pushd package/community
+# Set to local feeds
+pushd customfeeds/packages
+export packages_feed="$(pwd)"
+popd
+pushd customfeeds/luci
+export luci_feed="$(pwd)"
+popd
+sed -i '/src-git packages/d' feeds.conf.default
+echo "src-link packages $packages_feed" >> feeds.conf.default
+sed -i '/src-git luci/d' feeds.conf.default
+echo "src-link luci $luci_feed" >> feeds.conf.default
+
+# Update feeds
+./scripts/feeds update -a
 
 # Add openclash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
