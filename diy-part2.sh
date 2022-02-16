@@ -45,3 +45,7 @@ git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
+
+# luci-app-cpufreq
+sed -i "s/@arm/@(arm||aarch64)/g" luci/applications/luci-app-cpufreq/Makefile
+sed -i "s/"services"/"system"/g" luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
