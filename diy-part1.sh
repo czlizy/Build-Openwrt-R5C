@@ -20,3 +20,20 @@
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
+# Add openclash
+sed -i '$a src-git OpenClash https://github.com/vernesong/OpenClash' feeds.conf.default
+
+# Add luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+rm -rf ./feeds/luci/themes/luci-theme-argon
+
+# Add luci-app-vssr <M>
+git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
+git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
+
+# Add ServerChan
+#git clone --depth=1 https://github.com/tty228/luci-app-serverchan feeds/luci/applications/luci-app-serverchan
+
+# Add subconverter
+git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
