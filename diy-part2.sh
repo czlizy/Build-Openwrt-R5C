@@ -11,7 +11,7 @@
 #
 
 # 修改 argon 为默认主题,可根据你喜欢的修改成其他的（不选择那些会自动改变为默认主题的主题才有效果）
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
 # Add openclash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
@@ -32,5 +32,5 @@ git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 # luci-app-cpufreq
-sed -i "s/@arm/@(arm||aarch64)/g" ./luci/applications/luci-app-cpufreq/Makefile
-sed -i "s/"services"/"system"/g" ./luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
+sed -i "s/@arm/@(arm||aarch64)/g" ./feeds/luci/applications/luci-app-cpufreq/Makefile
+sed -i "s/"services"/"system"/g" ./feeds/luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
