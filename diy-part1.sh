@@ -21,19 +21,19 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.defau
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # Add openclash
-git clone --depth=1 -b master https://github.com/vernesong/OpenClash feeds.conf.default
+echo 'src-git openclash https://github.com/vernesong/OpenClash' >>feeds.conf.default
 
 # Add luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon feeds.conf.default
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config feeds.conf.default
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon feeds/luci/themes/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config feeds/luci/applications/luci-app-argon-config
 rm -rf ./feeds/luci/themes/luci-theme-argon
 
 # Add luci-app-vssr <M>
-git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git feeds.conf.default
-git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr feeds.conf.default
+#git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git feeds/luci/applications/luci-app-vssr
+#git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr feeds/luci/applications/luci-app-vssr
 
 # Add ServerChan
-git clone --depth=1 https://github.com/tty228/luci-app-serverchan feeds.conf.default
+git clone --depth=1 https://github.com/tty228/luci-app-serverchan feeds/luci/applications/luci-app-serverchan
 
 # Add subconverter
-git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter feeds.conf.default
+echo 'src-git openwrt-subconverter https://github.com/tindy2013/openwrt-subconverter' >>feeds.conf.default
