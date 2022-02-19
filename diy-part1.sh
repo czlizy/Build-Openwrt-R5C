@@ -33,7 +33,7 @@ rm -rf ./feeds/luci/themes/luci-theme-argon
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr feeds/luci/applications/luci-app-vssr
 
 # Add ServerChan
-git clone --depth=1 https://github.com/tty228/luci-app-serverchan feeds/luci/applications/luci-app-serverchan
+#git clone --depth=1 https://github.com/tty228/luci-app-serverchan feeds/luci/applications/luci-app-serverchan
 
 # Add subconverter
 #echo 'src-git openwrt-subconverter https://github.com/tindy2013/openwrt-subconverter' >>feeds.conf.default
