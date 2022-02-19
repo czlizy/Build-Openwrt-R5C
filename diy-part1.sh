@@ -10,10 +10,6 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-# Clone community packages to package/community
-mkdir package/community
-pushd package/community
-
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
@@ -24,20 +20,3 @@ pushd package/community
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
-# Add openclash
-git clone --depth=1 -b master https://github.com/vernesong/OpenClash
-
-# Add luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
-rm -rf ./feeds/luci/themes/luci-theme-argon
-
-# Add luci-app-vssr <M>
-git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
-git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
-
-# Add ServerChan
-#git clone --depth=1 https://github.com/tty228/luci-app-serverchan feeds/luci/applications/luci-app-serverchan
-
-# Add subconverter
-git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
