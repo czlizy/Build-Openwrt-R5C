@@ -29,7 +29,7 @@ mkdir package/community
 pushd package/community
 
 # Add openclash
-sed -i '$a src-git OpenClash https://github.com/vernesong/OpenClash' feeds.conf.default
+git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
 # Add luci-theme-argon
 rm -rf ./feeds/luci/themes/luci-theme-argon
