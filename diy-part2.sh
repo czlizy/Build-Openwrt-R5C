@@ -31,11 +31,6 @@ pushd package/community
 # Add openclash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
-# Add luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
-rm -rf ./feeds/luci/themes/luci-theme-argon
-
 # Add luci-app-vssr <M>
 git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
 git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
