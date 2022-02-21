@@ -24,10 +24,6 @@ sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" package/lean/
 sed -i "s/@arm/@(arm||aarch64)/g" ./feeds/luci/applications/luci-app-cpufreq/Makefile
 sed -i "s/"services"/"system"/g" ./feeds/luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
 
-# Clone community packages to package/community
-mkdir package/community
-pushd package/community
-
 # Add openclash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
