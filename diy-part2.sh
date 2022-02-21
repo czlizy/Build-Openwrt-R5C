@@ -24,8 +24,8 @@ export orig_version="$(cat "package/lean/default-settings/files/zzz-default-sett
 sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" package/lean/default-settings/files/zzz-default-settings
 
 # luci-app-cpufreq
-sed -i "s/@arm/@(arm||aarch64)/g" ./feeds/luci/applications/luci-app-cpufreq/Makefile
-sed -i "s/"services"/"system"/g" ./feeds/luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
+sed -i "s/@arm/@(arm||aarch64)/g" ../../feeds/luci/applications/luci-app-cpufreq/Makefile
+sed -i "s/"services"/"system"/g" ../../feeds/luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
 
 # Add openclash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
@@ -41,6 +41,6 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 # Add luci-theme-argon
-rm -rf ./feeds/luci/themes/luci-theme-argon
+rm -rf ../../feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git 
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config 
