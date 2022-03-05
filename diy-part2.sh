@@ -33,9 +33,6 @@ pushd package/community
 # Add openclash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
-#Add PassWall
-git clone --depth=1 -b packages https://github.com/xiaorouji/openwrt-passwall.git
-
 # Add luci-app-vssr <M>
 git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
 git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
