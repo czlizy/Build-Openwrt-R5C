@@ -51,3 +51,10 @@ git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 rm -rf ../../feeds/luci/themes/luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+
+# Add luci-app-dockerman
+rm -rf ../../feeds/luci/collections/luci-lib-docker
+rm -rf ../../feeds/luci/applications/luci-app-docker
+rm -rf ../../feeds/luci/applications/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker
