@@ -24,8 +24,15 @@ mkdir package/community
 pushd package/community
 
 # luci-app-cpufreq
-sed -i "s/@arm/@(arm||aarch64)/g" ../../feeds/luci/applications/luci-app-cpufreq/Makefile
-sed -i "s/"services"/"system"/g" ../../feeds/luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
+#sed -i "s/@arm/@(arm||aarch64)/g" ../../feeds/luci/applications/luci-app-cpufreq/Makefile
+#sed -i "s/"services"/"system"/g" ../../feeds/luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
+# Add cpufreq
+rm -rf ./feeds/luci/applications/luci-app-cpufreq 
+svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq ./feeds/luci/applications/luci-app-cpufreq
+ln -sf ./feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
+sed -i 's,1608,1800,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
+sed -i 's,2016,2208,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
+sed -i 's,1512,1608,g' feeds/luci/applications/luci-app-cpufreq/root/etc/uci-defaults/cpufreq
 
 # Add openclash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
