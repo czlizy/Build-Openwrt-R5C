@@ -27,8 +27,8 @@ rm -rf ./feeds/luci/applications/luci-app-cpufreq
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq ./feeds/luci/applications/luci-app-cpufreq
 
 # Clone community packages to package/community
-mkdir package/community
-pushd package/community
+#mkdir package/community
+#pushd package/community
 
 # Add openclash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash package/luci-app-openclash
@@ -51,3 +51,6 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 # Add luci-app-dockerman
 rm -rf feeds/luci/applications/luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
+
+./scripts/feeds update -a
+./scripts/feeds install -a
