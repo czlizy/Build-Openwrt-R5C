@@ -34,8 +34,8 @@ svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq .
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash package/luci-app-openclash
 
 # Add luci-app-vssr <M>
-git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
-git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
+#git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
+#git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
 # Add ServerChan
 #git clone --depth=1 https://github.com/tty228/luci-app-serverchan feeds/luci/applications/luci-app-serverchan
