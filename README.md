@@ -42,3 +42,8 @@ A template for building OpenWrt with GitHub Actions
 ## License
 
 [MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © [**P3TERX**](https://p3terx.com)
+
+生成.config：make defconfig
+差异部分就写入：./scripts/diffconfig.sh > seed.config
+提取.config：cat seed.config
+
