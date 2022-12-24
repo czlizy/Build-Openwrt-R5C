@@ -27,6 +27,9 @@ sed -i "s/"services"/"system"/g" ./feeds/luci/applications/luci-app-cpufreq/luas
 #svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq ./feeds/luci/applications/luci-app-cpufreq
 #ln -sf ./feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
 
+# Add openclash
+git clone --depth=1 -b master https://github.com/vernesong/OpenClash package/luci-app-openclash
+
 # Add luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
