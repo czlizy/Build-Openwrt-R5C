@@ -48,5 +48,5 @@ sed -i "s/"services"/"system"/g" ./feeds/luci/applications/luci-app-cpufreq/luas
 #rm -rf feeds/luci/applications/luci-app-dockerman
 #git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 
-#./scripts/feeds update -a
-#./scripts/feeds install -a
+./scripts/feeds update -a
+./scripts/feeds install -a
