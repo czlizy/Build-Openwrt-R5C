@@ -20,8 +20,9 @@ export orig_version="$(cat "package/lean/default-settings/files/zzz-default-sett
 sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" package/lean/default-settings/files/zzz-default-settings
 
 rm -rf package/kernel/mac80211
-svn export https://github.com/coolsnowwolf/lede/trunk/package/kernel/mac80211 package/kernel/mac80211
 rm -rf package/kernel/rtl8821cu
+svn export https://github.com/coolsnowwolf/lede/trunk/package/kernel/mac80211 package/kernel/mac80211
+
 
 # luci-app-cpufreq
 sed -i "s/@arm/@(arm||aarch64)/g" ./feeds/luci/applications/luci-app-cpufreq/Makefile
