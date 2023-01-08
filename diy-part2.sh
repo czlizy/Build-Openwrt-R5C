@@ -62,9 +62,9 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 #git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 
 # Test kernel 5.15
-sed -i 's/5.4/6.1/g' ./target/linux/rockchip/Makefile
-rm -rf target/linux/rockchip/image/armv8.mk
-cp -f $GITHUB_WORKSPACE/armv8.mk target/linux/rockchip/image/armv8.mk
+# sed -i 's/5.4/6.1/g' ./target/linux/rockchip/Makefile
+# rm -rf target/linux/rockchip/image/armv8.mk
+# cp -f $GITHUB_WORKSPACE/armv8.mk target/linux/rockchip/image/armv8.mk
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
