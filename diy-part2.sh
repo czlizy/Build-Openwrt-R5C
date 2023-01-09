@@ -19,11 +19,11 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 export orig_version="$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
 sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" package/lean/default-settings/files/zzz-default-settings
 
-rm -rf package/kernel/mac80211
-rm -rf package/kernel/rtl8821cu
-rm -rf package/kernel/mt76
-svn export https://github.com/coolsnowwolf/lede/trunk/package/kernel/mac80211 package/kernel/mac80211
-svn export https://github.com/coolsnowwolf/lede/trunk/package/kernel/mt76 package/kernel/mt76
+#rm -rf package/kernel/mac80211
+#rm -rf package/kernel/rtl8821cu
+#rm -rf package/kernel/mt76
+#svn export https://github.com/coolsnowwolf/lede/trunk/package/kernel/mac80211 package/kernel/mac80211
+#svn export https://github.com/coolsnowwolf/lede/trunk/package/kernel/mt76 package/kernel/mt76
 
 
 # luci-app-cpufreq
