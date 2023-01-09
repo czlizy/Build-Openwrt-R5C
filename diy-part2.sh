@@ -21,7 +21,9 @@ sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" package/lean/
 
 rm -rf package/kernel/mac80211
 rm -rf package/kernel/rtl8821cu
+rm -rf package/kernel/mt76
 svn export https://github.com/coolsnowwolf/lede/trunk/package/kernel/mac80211 package/kernel/mac80211
+svn export https://github.com/coolsnowwolf/lede/trunk/package/kernel/mt76 package/kernel/mt76
 
 
 # luci-app-cpufreq
